@@ -1,12 +1,81 @@
-# React + Vite
+# ⛩ Portal Wakai | "Interligando Mundos"
+<div align="center"> ✨ Feito com React, Vite e Tailwind CSS ✨ </div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Banner](https://via.placeholder.com/1200x400?text=Portal+Wakai+Banner) <!-- Adicione um banner real depois -->
 
-Currently, two official plugins are available:
+## 🌌 Sobre o Projeto
+Portal Wakai é uma aplicação web moderna que conecta diferentes dimensões de conteúdo através de uma interface fluida e responsiva.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
+<div align="center">
+  
+| Ferramenta         | Descrição                                                                 |
+|--------------------|---------------------------------------------------------------------------|
+| ⚡ Vite            | Ferramenta frontend ultrarrápida                                         |
+| ⚛️ React          | Biblioteca para construção de interfaces                                  |
+| 🎨 Tailwind CSS   | Framework CSS utilitário                                                 |
+| 🦜 PostCSS        | Processador CSS moderno                                                  |
+| 🌀 Autoprefixer   | Adiciona prefixos vendor automaticamente                                 |
 
-## Expanding the ESLint configuration
+</div>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Configuração
+
+### Pré-requisitos
+- Node.js (v18+)
+- npm (v9+) ou yarn (v1.22+)
+
+### Instalação
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/portal-wakai.git
+
+# Acesse o diretório
+cd portal-wakai
+
+# Instale as dependências
+npm install
+# ou
+yarn
+
+# Inicie o servidor de desenvolvimento
+npm run dev
+ou
+# yarn dev
+
+# Construa para produção:
+npm run build
+# ou
+yarn build
+
+# Estrutura do Projeto
+portal-wakai/
+├── public/            # Arquivos estáticos
+│   ├── favicon.ico
+│   └── robots.txt
+├── src/               # Código fonte
+│   ├── assets/        # Imagens, fonts, etc.
+│   ├── components/    # Componentes React
+│   ├── pages/         # Páginas da aplicação
+│   ├── styles/        # Estilos globais
+│   ├── App.jsx        # Componente raiz
+│   ├── main.jsx       # Ponto de entrada
+│   └── index.css      # Estilos principais
+├── .eslintrc.js       # Configuração ESLint
+├── .gitignore         # Arquivos ignorados pelo Git
+├── index.html         # Template HTML
+├── package.json       # Dependências do projeto
+├── postcss.config.js  # Configuração PostCSS
+├── tailwind.config.js # Configuração Tailwind
+└── vite.config.js     # Configuração Vite
+
+```
+
+## 🌐 Acesso do Site (visualização)
+https://portalwakai.github.io/HACKATHON25-PortalWakai/
+
+## 📝 Licença
+Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para detalhes.
+
+## 🙌 Contribuição
+Contribuições são bem-vindas! Por favor abra uma issue ou envie um pull request.
