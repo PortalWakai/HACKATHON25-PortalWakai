@@ -48,26 +48,34 @@ npm run build
 # ou
 yarn build
 
-# Estrutura do Projeto
+
+```
+
+### Estrutura do Projeto
+
+```estrutura-do-projeto
 portal-wakai/
-├── public/            # Arquivos estáticos
-│   ├── favicon.ico
-│   └── robots.txt
-├── src/               # Código fonte
-│   ├── assets/        # Imagens, fonts, etc.
-│   ├── components/    # Componentes React
-│   ├── pages/         # Páginas da aplicação
-│   ├── styles/        # Estilos globais
-│   ├── App.jsx        # Componente raiz
-│   ├── main.jsx       # Ponto de entrada
-│   └── index.css      # Estilos principais
-├── .eslintrc.js       # Configuração ESLint
-├── .gitignore         # Arquivos ignorados pelo Git
-├── index.html         # Template HTML
-├── package.json       # Dependências do projeto
-├── postcss.config.js  # Configuração PostCSS
-├── tailwind.config.js # Configuração Tailwind
-└── vite.config.js     # Configuração Vite
+├── public/                     # Arquivos estáticos
+│   ├── portalwakai.png
+│   └── vite.svg
+├── src/                        # Código fonte
+│   ├── assets/                 # Imagens, fonts, etc.
+│   ├── styles/                 # Estilos globais
+│   ├── App.css                 # Estilos secúndarios
+│   ├── App.jsx                 # Componente raiz
+│   ├── AuthorsPage.jsx         # Página Autores
+│   ├── HomePage.jsx            # Página Home
+│   ├── index.css               # Estilos principais
+│   ├── main.jsx                # Ponto de entrada
+│   ├── Publications.jsx        # Página Publicações
+│   └── PublishersPage.jsx      # Página Editoras
+├── .eslintrc.js                # Configuração ESLint
+├── .gitignore                  # Arquivos ignorados pelo Git
+├── index.html                  # Template HTML
+├── package.json                # Dependências do projeto
+├── postcss.config.js           # Configuração PostCSS
+├── tailwind.config.js          # Configuração Tailwind
+└── vite.config.js              # Configuração Vite
 
 ```
 
