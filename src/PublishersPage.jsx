@@ -7,42 +7,42 @@ const carouselItemsA = [
     imageUrl: 'https://feiradolivrodaunesp.com.br/noticias/wp-content/uploads/2022/04/34-logo.png',
   },
   {
-    title: 'Odisseia',
-    imageUrl: 'https://m.media-amazon.com/images/I/71cvHFJKp2L._AC_UF1000,1000_QL80_.jpg',
+    title: 'Kaiju Editora',
+    imageUrl: 'https://lh3.googleusercontent.com/proxy/319Tb2PGZJErxoVnRlYQNFlPoVd0TE8c-rv6qcr48OPUji2y5pIuu0a0e7GiX5zK5BNqcrjm3yYJMSXAO8Y',
   },
   {
-    title: 'Eneida',
-    imageUrl: 'https://m.media-amazon.com/images/I/91sJwHCY8nL._AC_UF1000,1000_QL80_.jpg',
+    title: 'Citadel Grupo Editorial',
+    imageUrl: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGkBL3EON9vIbV5Eq969url57FUBlY8SzszbkKn2zyleKGRKUgsWtQF1I4JzvsA-xy46tfMPvjz4TWixZmSlk66L6KneRzbNQLN4wWKA68jY4lLc56BkhHLjfRQz_hh0l-EMjk7mdZMRb3/s600-c/Citadel+Logo.jpg',
   },
 ];
 
 const carouselItemsB = [
   {
-    title: 'It',
-    imageUrl: 'https://m.media-amazon.com/images/I/91g9Dvtf+jL._AC_UF1000,1000_QL80_.jpg',
+    title: 'Image Comics',
+    imageUrl: 'https://ovicio.com.br/wp-content/uploads/2020/02/20200215-imagecomics.jpg',
   },
   {
-    title: 'O Iluminado',
-    imageUrl: 'https://m.media-amazon.com/images/I/81Q+pJi4NjL._AC_UF1000,1000_QL80_.jpg',
+    title: 'Panini Comics',
+    imageUrl: 'https://i0.wp.com/www.portaldonerd.com.br/wp-content/uploads/2022/05/paninicomics-e1557503444106.jpg',
   },
   {
-    title: 'Eu não tenho boca e preciso gritar',
-    imageUrl: 'https://m.media-amazon.com/images/I/A1TFWwAc-8L._AC_UF1000,1000_QL80_.jpg',
+    title: 'Dark Horse Comics',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Dark_Horse_Comics_logo.svg/1200px-Dark_Horse_Comics_logo.svg.png',
   },
 ];
 
 const carouselItemsC = [
   {
-    title: 'Bladerunner',
-    imageUrl: 'https://editoraaleph.com.br/cdn/shop/files/capas_site_700x1000_BladeRunner.png?v=1714612720',
+    title: 'Editora Pearson',
+    imageUrl: 'https://simplissimo.com.br/wp-content/uploads/2012/07/pearson-authors.jpg',
   },
   {
-    title: 'Grandes Esperanças',
-    imageUrl: 'https://m.media-amazon.com/images/I/71LdmGeFZDL._AC_UF1000,1000_QL80_.jpg',
+    title: 'RELX Group',
+    imageUrl: 'https://relx.wd3.myworkdayjobs.com/relx/assets/logo',
   },
   {
-    title: 'Garoto de Ipanema',
-    imageUrl: 'https://acdn-us.mitiendanube.com/stores/003/344/305/products/vol-1-2bc52b6352014427d717434477566365-1024-1024.png'
+    title: 'Thompson Reuters',
+    imageUrl: 'https://www.thomsonreuters.com.br/content/dam/ewp-m/images/brazil/en/artworked-images/tr-logo-thumb.png.transform/rect-768/q90/image.png'
   },
 ];
 
