@@ -1,7 +1,7 @@
 # ⛩ Portal Wakai | "Interligando Mundos"
-<div align="center"> ✨ Feito com React, Vite e Tailwind CSS ✨ </div>
 
 ![Portal Wakai Banner](/public/banner.png)
+<div align="center"> ✨ Feito com React, Vite e Tailwind CSS ✨ </div>
 
 ## 🌌 Sobre o Projeto
 Portal Wakai é uma aplicação web moderna que conecta diferentes dimensões de conteúdo através de uma interface fluida e responsiva.
