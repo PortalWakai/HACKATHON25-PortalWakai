@@ -259,15 +259,6 @@ function NavBar({ onNavigate, scrollToAbout }) {
       label: 'AUTORES', 
       icon: <FontAwesomeIcon icon={faPenNib} />, 
       action: () => onNavigate('authors') 
-    },
-    { 
-      id: 5, 
-      label: 'SOBRE NÓS', 
-      icon: <FontAwesomeIcon icon={faUsers} />, 
-      action: () => {
-        onNavigate('home');
-        setTimeout(scrollToAbout, 100);
-      }
     }
   ];
 
