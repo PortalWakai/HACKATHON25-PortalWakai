@@ -154,7 +154,7 @@ function ProfileDropdown() {
 
 function Header() {
   return (
-    <header className="relative w-full h-40 z-50 bg-slate-700 shadow-lg">
+    <header className="relative w-full h-40 z-50 bg-slate-900 shadow-lg">
       <div className="container mx-auto h-full flex justify-between items-center px-4">
         <div className="logo w-28 h-32 flex justify-center place-items-center p-1">
           <img 
