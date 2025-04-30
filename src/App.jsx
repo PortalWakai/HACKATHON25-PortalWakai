@@ -5,7 +5,6 @@ import PublishersPage from './PublishersPage';
 import PublicationsPage from './PublicationsPage';
 import AuthorsPage from './AuthorsPage';
 import HomePage from './HomePage';
-// importando  páginas
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
@@ -13,19 +12,24 @@ import {
   faBook, 
   faNewspaper, 
   faPenNib, 
-  faMagnifyingGlass 
+  faMagnifyingGlass,
+  faUsers
 } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
-library.add(faHouse, faBook, faNewspaper, faPenNib, faMagnifyingGlass);
+library.add(faHouse, faBook, faNewspaper, faPenNib, faMagnifyingGlass, faUsers);
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   const handleNavigate = (page) => {
     setCurrentPage(page);
-    // Rolagem para o topo após navegação
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about-us');
+    aboutSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const renderPage = () => {
@@ -45,13 +49,64 @@ export default function App() {
 
   return (
     <div className="bg-slate-700 min-h-screen flex flex-col">
-      <Header />
-      <NavBar onNavigate={handleNavigate} />
+      <Header onNavigate={handleNavigate} scrollToAbout={scrollToAbout} />
+      <NavBar onNavigate={handleNavigate} scrollToAbout={scrollToAbout} />
       
       <main className="flex-1 container mx-auto p-4">
         {renderPage()}
       </main>
+
+      <Footer />
     </div>
+  );
+}
+
+function Footer() {
+  return (
+    <footer id="about-us" className="bg-slate-800 text-white py-12 px-4">
+      <div className="container mx-auto max-w-6xl">
+        <h2 className="text-3xl font-bold mb-8 text-center">Sobre Nós</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-slate-700 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-4 text-red-400">
+              <FontAwesomeIcon icon={faUsers} className="mr-2" />
+              Quem Somos
+            </h3>
+            <p className="text-slate-300">
+              O Portal Wakai é uma plataforma dedicada a conectar leitores, autores e editoras,
+              proporcionando uma experiência única no mundo da literatura.
+            </p>
+          </div>
+          
+          <div className="bg-slate-700 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-4 text-red-400">
+              <FontAwesomeIcon icon={faBook} className="mr-2" />
+              Nossa Missão
+            </h3>
+            <p className="text-slate-300">
+              Facilitar a descoberta de novos autores e obras, criando pontes entre criadores
+              e apreciadores de conteúdo literário.
+            </p>
+          </div>
+          
+          <div className="bg-slate-700 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-4 text-red-400">
+              <FontAwesomeIcon icon={faPenNib} className="mr-2" />
+              Contato
+            </h3>
+            <p className="text-slate-300">
+              <strong>Email:</strong> wakaiportal@gmail.com<br />
+              <strong>Telefone:</strong> (XX) XXXX-XXXX
+            </p>
+          </div>
+        </div>
+        
+        <div className="border-t border-slate-600 mt-8 pt-6 text-center text-slate-400">
+          <p>© {new Date().getFullYear()} Portal Wakai. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
   );
 }
 
@@ -68,11 +123,10 @@ function SearchBar() {
   );
 }
 
-function ProfileDropdown() {
+function ProfileDropdown({ onNavigate, scrollToAbout }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  // Fechar dropdown ao clicar fora
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -88,7 +142,6 @@ function ProfileDropdown() {
 
   return (
     <div className="relative" ref={dropdownRef}>
-      {/* Botão do Perfil */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 focus:outline-none"
@@ -107,7 +160,6 @@ function ProfileDropdown() {
         </svg>
       </button>
 
-      {/* Dropdown Menu */}
       {isOpen && (
         <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
           <div className="px-4 py-2 border-b border-gray-100">
@@ -132,12 +184,21 @@ function ProfileDropdown() {
           >
             Notificações
           </a>
-          
+          <a
+            href="#about-us"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsOpen(false);
+              scrollToAbout();
+            }}
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+          >
+            Sobre Nós
+          </a>
           <div className="border-t border-gray-100"></div>
           
           <button
             onClick={() => {
-              // Lógica de logout aqui
               console.log('Usuário deslogado');
               setIsOpen(false);
             }}
@@ -151,8 +212,7 @@ function ProfileDropdown() {
   );
 }
 
-
-function Header() {
+function Header({ onNavigate, scrollToAbout }) {
   return (
     <header className="relative w-full h-40 z-50 bg-slate-800 shadow-lg">
       <div className="container mx-auto h-full flex justify-between items-center px-4">
@@ -165,15 +225,15 @@ function Header() {
         </div>
         <SearchBar />
         <div className="profile-button">
-          <ProfileDropdown />
+          <ProfileDropdown onNavigate={onNavigate} scrollToAbout={scrollToAbout} />
         </div>
       </div>
     </header>
   );
 }
 
-function NavBar({ onNavigate }) {
-  const [activeItem, setActiveItem] = useState(1); // State for active item
+function NavBar({ onNavigate, scrollToAbout }) {
+  const [activeItem, setActiveItem] = useState(1);
 
   const menuItems = [
     { 
@@ -199,6 +259,15 @@ function NavBar({ onNavigate }) {
       label: 'AUTORES', 
       icon: <FontAwesomeIcon icon={faPenNib} />, 
       action: () => onNavigate('authors') 
+    },
+    { 
+      id: 5, 
+      label: 'SOBRE NÓS', 
+      icon: <FontAwesomeIcon icon={faUsers} />, 
+      action: () => {
+        onNavigate('home');
+        setTimeout(scrollToAbout, 100);
+      }
     }
   ];
 
@@ -216,17 +285,14 @@ function NavBar({ onNavigate }) {
               text-white transition-all duration-300 group overflow-hidden
               ${activeItem === item.id ? 'text-red-400' : 'hover:text-red-300'}`}
           >
-            {/* Animated background effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-500/10 to-transparent 
               opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             
-            {/* Icon and text */}
             <div className="flex flex-col items-center transform group-hover:scale-110 transition-transform">
               <span className="text-lg mb-1">{item.icon}</span>
               <span className="text-xs font-medium tracking-wider">{item.label}</span>
             </div>
             
-            {/* Active indicator */}
             <div className={`absolute bottom-0 w-3/4 h-1 bg-red-500 transition-all duration-300 
               ${activeItem === item.id ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-75'}`} />
           </button>
