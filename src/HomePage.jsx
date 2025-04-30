@@ -5,29 +5,29 @@ const carouselItems = [
   {
     title: 'Bem-vindo à nossa plataforma!',
     subtitle: 'Explore um universo de livros.',
-    imageUrl: 'https://source.unsplash.com/random/1600x600?books',
+    imageUrl: 'https://img.freepik.com/fotos-premium/o-desejo-de-viajar-pelo-livro-captura-visualmente-o-desejo-de-explorar-novos-mundos-atraves-dos-livros_964851-51918.jpg',
   },
   {
     title: 'Conecte-se com editoras e autores',
     subtitle: 'Tudo em um só lugar.',
-    imageUrl: 'https://source.unsplash.com/random/1600x600?library',
+    imageUrl: 'https://www.universidadedolivro.com.br/wp-content/uploads/2023/10/UNIL-BANNER-V.FINAL_.jpg',
   },
   {
     title: 'Publique e compartilhe',
     subtitle: 'Dê voz às suas ideias.',
-    imageUrl: 'https://source.unsplash.com/random/1600x600?writing',
+    imageUrl: 'https://www.shutterstock.com/image-illustration/colored-silhouettes-people-speech-bubbles-260nw-2183575945.jpg',
   },
 ];
 
 const adsItems = [
   {
-    imageUrl: 'https://source.unsplash.com/random/1600x600?books',
+    imageUrl: 'https://cdn2.penguin.com.au/covers/original/9781646514939.jpg',
   },
   {
-    imageUrl: 'https://source.unsplash.com/random/1600x600?library',
+    imageUrl: 'https://m.media-amazon.com/images/I/61Kt3d+mhuL._AC_UF1000,1000_QL80_.jpg',
   },
   {
-    imageUrl: 'https://source.unsplash.com/random/1600x600?writing',
+    imageUrl: 'https://m.media-amazon.com/images/I/61zHq7tExYL._AC_UF1000,1000_QL80_.jpg',
   },
 ];
 
