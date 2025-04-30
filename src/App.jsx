@@ -5,7 +5,7 @@ import PublishersPage from './PublishersPage';
 import PublicationsPage from './PublicationsPage';
 import AuthorsPage from './AuthorsPage';
 import HomePage from './HomePage';
-// importando  paginas
+// importando  páginas
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
