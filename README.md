@@ -40,8 +40,8 @@ yarn
 
 # Inicie o servidor de desenvolvimento
 npm run dev
-ou
-# yarn dev
+# ou
+yarn dev
 
 # Construa para produção:
 npm run build
@@ -73,17 +73,14 @@ portal-wakai/
 ├── .gitignore                  # Arquivos ignorados pelo Git
 ├── index.html                  # Template HTML
 ├── package.json                # Dependências do projeto
-├── postcss.config.js           # Configuração PostCSS
-├── tailwind.config.js          # Configuração Tailwind
-└── vite.config.js              # Configuração Vite
+├── postcss.config.js            # Configuração PostCSS
+├── tailwind.config.js           # Configuração Tailwind
+└── vite.config.js               # Configuração Vite
 
 ```
 
 ## 🌐 Acesso do Site (visualização)
 https://portalwakai.github.io/HACKATHON25-PortalWakai/
-
-## 📝 Licença
-Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para detalhes.
 
 ## 🙌 Contribuição
 Contribuições são bem-vindas! Por favor abra uma issue ou envie um pull request.
